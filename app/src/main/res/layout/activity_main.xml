@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--ALL COMMENTS ARE FOR MY REFERENCE TO ASSIST WITH LATER TASKS, NOT FOR ASSESSMENT PURPOSES-->
+<!--Change layout to linear-->
+<!--Orientation vertical makes elements appear in a column, where horizontal would be row-->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/teal_200"
+    tools:context=".MainActivity"
+    >
+
+
+    <!--Match parent matches phone size-->
+    <!--dp is relative pixel size for phone-->
+    <!--Sp is scalable font for mobile-->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textSize="36sp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textColor="@color/black"
+        android:text="Simple Unit Converter"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        />
+
+    <!-- Background tint changes colour of dropdown arrow-->
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textAlignment="center"
+
+        />
+
+    <TextView
+        android:id="@+id/subHeading2"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textColor="@color/black"
+        android:text="INPUT # UNITS CONVERTED"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-smallcaps"
+        />
+    <TextView
+        android:id="@+id/subHeading1"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textColor="@color/black"
+        android:text="SELECT CONVERSION TYPE"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        />
+
+    <!--input type dictates what can be inputted into the field (in this case a decimal number-->
+    <EditText
+        android:id="@+id/inputTextField"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:inputType="numberDecimal"
+    />
+    <TextView
+        android:id="@+id/subHeading3"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textColor="@color/black"
+        android:text="RESULT"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        />
+    <TextView
+        android:id="@+id/outputText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        />
+
+    <!--On click defined in the element's xml rather than setting an on click listener-->
+    <!--function with same name from .java file will be called on button click-->
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:text="Convert"
+        android:onClick="calculate"
+    />
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
